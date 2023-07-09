@@ -1,9 +1,7 @@
 import { useState, useEffect } from 'react';
-
-import LoaderImage from './../../assets/images/loader.gif';
 import classes from './step-3.module.css';
 
-const Step3 = ({ step, onNextStep }) => {
+const Step3 = ({ image, step, onNextStep }) => {
     const [title, setTitle] = useState('Confirming Your Eligibility…');
 
     useEffect(() => {
@@ -26,7 +24,7 @@ const Step3 = ({ step, onNextStep }) => {
     return (
         <div className={classes.step}>
             <div className={classes['step__loader']}>
-                <img src={LoaderImage} alt='Loader' />
+                <img src={image} alt='Loader' />
             </div>
             <h2 className='text-center'>{title}</h2>
         </div>

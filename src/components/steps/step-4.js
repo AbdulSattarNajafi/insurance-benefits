@@ -1,12 +1,11 @@
-import Congratulations from './../../assets/images/congratulations.png';
 import SecondaryButton from '../buttons/secondary-button';
 import classes from './step-4.module.css';
 
-const Step4 = () => {
+const Step4 = ({ image }) => {
     return (
         <div className={classes.step}>
             <div className={classes['step__image']}>
-                <img src={Congratulations} alt='Congratulations' />
+                <img src={image} alt='Congratulations' />
             </div>
 
             <div className={classes['step__text']}>
