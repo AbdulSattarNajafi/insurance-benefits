@@ -101,6 +101,10 @@ h4 {
     flex-direction: column;
 }
 
+.layout.layout-padding {
+    padding-bottom: 91px;
+}
+
 main {
     flex: 1;
     display: flex;
@@ -115,7 +119,8 @@ main {
 }
 
 .section {
-    padding: 14px 0;
+    padding-top: 14px;
+    padding-bottom: 32px;
 }
 
 .text-center {
@@ -145,7 +150,7 @@ main {
     }
 
     .section {
-        padding: 16px 0;
+        padding-top: 16px;
     }
 }
 
@@ -161,8 +166,12 @@ main {
     h4 {
         font-size: 18px;
     }
+    .layout.layout-padding {
+        padding-bottom: 94px;
+    }
     .section {
-        padding: 20px 0;
+        padding-top: 20px;
+        padding-bottom: 40px;
     }
 }
 
@@ -175,7 +184,8 @@ main {
         font-size: 28px;
     }
     .section {
-        padding: 26px 0;
+        padding-top: 30px;
+        padding-bottom: 60px;
     }
 }
 
@@ -191,7 +201,7 @@ main {
     h4 {
         font-size: 20px;
     }
-    .section {
-        padding: 32px 0;
+    .layout.layout-padding {
+        padding-bottom: 104px;
     }
 }

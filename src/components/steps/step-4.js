@@ -10,7 +10,9 @@ const Step4 = () => {
             </div>
 
             <div className={classes['step__text']}>
-                <h2>Congratulations, you may be eligible - call now!</h2>
+                <h2>
+                    Congratulations! You <br /> may be eligible. <br /> Call Now!
+                </h2>
                 <SecondaryButton text='Tap To Qualify' phoneNumber='1.888.888.8888' />
             </div>
         </div>

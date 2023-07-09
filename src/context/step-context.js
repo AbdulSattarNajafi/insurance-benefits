@@ -1,6 +1,6 @@
 import { createContext, useReducer } from 'react';
 
-const initialState = { step: 1 };
+const initialState = { step: 1, isFirstNoClicked: false };
 
 export const StepContext = createContext({
     step: initialState.step,
@@ -16,8 +16,10 @@ const stepsReducer = (state, action) => {
         case 'PREV_STEP':
             if (state.step === 4) {
                 return { step: state.step - 2 };
-            } else if (state.step === 5) {
+            } else if (state.step === 5 && !state.isFirstNoClicked) {
                 return { step: state.step - 3 };
+            } else if (state.isFirstNoClicked) {
+                return { step: 1, sFirstNoClicked: false };
             } else {
                 return {
                     step: state.step - 1,
@@ -26,6 +28,7 @@ const stepsReducer = (state, action) => {
         case 'NOT_ELIGIBLE':
             return {
                 step: 5,
+                isFirstNoClicked: action.payload,
             };
         default:
             return state;

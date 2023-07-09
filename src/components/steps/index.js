@@ -14,20 +14,20 @@ const Steps = () => {
         dispatch({ type: 'NEXT_STEP' });
     };
 
-    const onYesHandler = () => {
+    const notEligible = () => {
         dispatch({ type: 'NOT_ELIGIBLE' });
     };
 
-    const onNoHandler = () => {
-        dispatch({ type: 'NEXT_STEP' });
+    const firstNoHandler = () => {
+        dispatch({ type: 'NOT_ELIGIBLE', payload: true });
     };
 
     return (
         <section className='section'>
             <div className='container'>
-                {step === 1 && <Step1 onNextStep={nextStep} />}
-                {step === 2 && <Step2 onYes={onYesHandler} onNo={onNoHandler} />}
-                {step === 3 && <Step3 onNextStep={nextStep} />}
+                {step === 1 && <Step1 onNextStep={nextStep} onNotEligible={firstNoHandler} />}
+                {step === 2 && <Step2 onYes={notEligible} onNo={nextStep} />}
+                {step === 3 && <Step3 onNextStep={nextStep} step={step} />}
                 {step === 4 && <Step4 />}
                 {step === 5 && <Step5 />}
             </div>

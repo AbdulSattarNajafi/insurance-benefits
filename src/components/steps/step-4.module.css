@@ -29,18 +29,17 @@
 
 @media (min-width: 768px) {
     .step__image img {
-        width: 280px;
+        width: 260px;
     }
 
     .step__text h2 {
         max-width: 330px;
-        margin-bottom: 40px;
     }
 }
 
 @media (min-width: 992px) {
     .step__image img {
-        width: 320px;
+        width: 280px;
     }
     .step__text h2 {
         max-width: 360px;
@@ -49,10 +48,10 @@
 
 @media (min-width: 1200px) {
     .step__image img {
-        width: 360px;
+        width: 300px;
     }
     .step__text h2 {
         max-width: 420px;
-        margin-bottom: 50px;
+        margin-bottom: 40px;
     }
 }

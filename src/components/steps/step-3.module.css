@@ -1,26 +1,23 @@
+.step {
+    text-align: center;
+}
+
 .step__loader {
     display: flex;
     justify-content: center;
+    margin-bottom: 16px;
 }
 
 .step__loader img {
     max-width: 375px;
     width: 100%;
-    height: auto;
-}
-
-.step h2 {
-    transform: translateY(-50px);
-}
-
-@media (min-width: 768px) {
-    .step__loader img {
-        max-width: 400px;
-    }
+    height: 200px;
+    object-fit: cover;
 }
 
 @media (min-width: 992px) {
     .step__loader img {
-        max-width: 460px;
+        max-width: 400px;
+        height: 220px;
     }
 }

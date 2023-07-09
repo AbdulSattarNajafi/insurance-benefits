@@ -1,5 +1,7 @@
 .btn {
+    position: relative;
     display: flex;
+    justify-content: center;
     align-items: center;
     width: 294px;
     background: var(--green-color);
@@ -12,13 +14,17 @@
 
 .btn span {
     display: inline-block;
-    margin-right: 29px;
+}
+
+.btn-icon {
+    position: absolute;
+    left: 25px;
 }
 
 .btn__text {
     display: flex;
     flex-direction: column;
-    text-align: left;
+    align-items: center;
 }
 
 .btn__text-label {

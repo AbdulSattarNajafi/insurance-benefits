@@ -14,30 +14,23 @@
 }
 
 @media (min-width: 576px) {
-    .step__image img {
-        width: 180px;
-    }
-
     .step h2 {
         max-width: 575px;
     }
 }
 
 @media (min-width: 768px) {
-    .step__image {
-        margin-bottom: 40px;
-    }
-    .step__image img {
-        width: 200px;
-    }
     .step h2 {
         max-width: 636px;
     }
 }
 
 @media (min-width: 992px) {
+    .step__image {
+        margin-bottom: 40px;
+    }
     .step__image img {
-        width: 240px;
+        width: 180px;
     }
     .step h2 {
         max-width: 688px;
@@ -45,11 +38,8 @@
 }
 
 @media (min-width: 1200px) {
-    .step__image {
-        margin-bottom: 50px;
-    }
     .step__image img {
-        width: 260px;
+        width: 200px;
     }
     .step h2 {
         max-width: 770px;

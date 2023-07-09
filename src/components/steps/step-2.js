@@ -4,7 +4,9 @@ import classes from './step-2.module.css';
 const Step2 = ({ onYes, onNo }) => {
     return (
         <div className={classes.step}>
-            <h2>Great, are you on Medicaid or Medicare?</h2>
+            <h2>
+                Great, are you on Medicaid <br /> or Medicare?
+            </h2>
 
             <div className={classes['step__button']}>
                 <PrimaryButton text='Yes' onClick={onYes} />

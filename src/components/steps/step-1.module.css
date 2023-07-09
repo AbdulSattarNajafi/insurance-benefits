@@ -38,7 +38,7 @@
 
 @media (min-width: 576px) {
     .step__image img {
-        width: 380px;
+        width: 360px;
     }
 }
 
@@ -50,16 +50,15 @@
         font-size: 16px;
         line-height: 24px;
         letter-spacing: 0px;
-        margin-top: 8px;
+        margin-top: 6px;
     }
 
     .step__image {
         margin-top: 16px;
-        margin-bottom: 20px;
     }
 
     .step__image img {
-        width: 540px;
+        width: 400px;
         margin-top: 10px;
     }
     .step__ages-buttons {
@@ -74,18 +73,12 @@
     .step__header p {
         font-size: 18px;
         line-height: 28px;
-        margin-top: 10px;
     }
     .step__image {
         margin-top: 20px;
-        margin-bottom: 24px;
     }
 
     .step__image img {
-        width: 680px;
-        margin-top: 16px;
-    }
-    .step__ages-buttons {
-        margin-top: 32px;
+        width: 450px;
     }
 }

@@ -3,23 +3,25 @@ import { useState, useEffect } from 'react';
 import LoaderImage from './../../assets/images/loader.gif';
 import classes from './step-3.module.css';
 
-const Step3 = ({ onNextStep }) => {
+const Step3 = ({ step, onNextStep }) => {
     const [title, setTitle] = useState('Confirming Your Eligibility…');
 
     useEffect(() => {
-        const titleTimer = setTimeout(() => {
-            setTitle('Locating Your Best Options...');
-        }, 1500);
+        if (step === 3) {
+            const titleTimer = setTimeout(() => {
+                setTitle('Locating Your Best Options...');
+            }, 1500);
 
-        const nextStepTimer = setTimeout(() => {
-            onNextStep();
-        }, 3000);
+            const nextStepTimer = setTimeout(() => {
+                onNextStep();
+            }, 3000);
 
-        return () => {
-            clearTimeout(titleTimer);
-            clearTimeout(nextStepTimer);
-        };
-    }, [onNextStep]);
+            return () => {
+                clearTimeout(titleTimer);
+                clearTimeout(nextStepTimer);
+            };
+        }
+    }, [step, onNextStep]);
 
     return (
         <div className={classes.step}>
