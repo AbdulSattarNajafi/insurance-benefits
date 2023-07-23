@@ -1,25 +1,38 @@
+import React, { Suspense } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import StepContextProvider from './context/step-context';
 
-import Layout from './layout/layout';
-import Home from './pages/home';
-import NotFound from './pages/noFound';
+import Layout from './layout/Layout';
+import Tutor from './pages/Tutor';
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
+import NotFound from './pages/NotFound';
 
-const routes = createBrowserRouter([
+const HomeComponent = React.lazy(() => import('./pages/Home'));
+
+const router = createBrowserRouter([
     {
         path: '/',
         element: <Layout />,
-        children: [{ index: true, element: <Home /> }],
+
+        children: [
+            {
+                index: true,
+                element: (
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <HomeComponent />
+                    </Suspense>
+                ),
+            },
+            { path: 'tutor', element: <Tutor /> },
+            { path: 'blog', element: <Blog /> },
+            { path: 'blog/:postId', element: <BlogPost /> },
+        ],
     },
     { path: '*', element: <NotFound /> },
 ]);
 
 function App() {
-    return (
-        <StepContextProvider>
-            <RouterProvider router={routes} />
-        </StepContextProvider>
-    );
+    return <RouterProvider router={router}></RouterProvider>;
 }
 
 export default App;
